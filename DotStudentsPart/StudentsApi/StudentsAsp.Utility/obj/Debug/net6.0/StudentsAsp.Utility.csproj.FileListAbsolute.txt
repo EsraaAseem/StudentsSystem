@@ -1,0 +1,12 @@
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\bin\Debug\net6.0\StudentsAsp.Utility.deps.json
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\bin\Debug\net6.0\StudentsAsp.Utility.dll
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\bin\Debug\net6.0\StudentsAsp.Utility.pdb
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.csproj.AssemblyReference.cache
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.GeneratedMSBuildEditorConfig.editorconfig
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.AssemblyInfoInputs.cache
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.AssemblyInfo.cs
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.csproj.CoreCompileInputs.cache
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.dll
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\refint\StudentsAsp.Utility.dll
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\StudentsAsp.Utility.pdb
+F:\0.App\Front-end\Angular\AngDot-Students\DotStudentsPart\StudentsApi\StudentsAsp.Utility\obj\Debug\net6.0\ref\StudentsAsp.Utility.dll

@@ -1,0 +1,40 @@
+.errorcontent{
+    width: 50%;
+    height: 50%;
+    background-color: #4b5d727d;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    color: white;
+    border-radius: 25px;
+    z-index: 1000;
+}
+.bt{
+    z-index: 7;
+    position: absolute;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #de1c1c;
+    text-align: center;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    color: white;
+    border-color: white;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched{
+border: 1px solid red;
+}

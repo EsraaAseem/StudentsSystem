@@ -1,0 +1,9 @@
+.img{
+    height: 300px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: rgb(242, 243, 243);
+}
+h2{
+    color: rgb(24, 143, 198);
+}

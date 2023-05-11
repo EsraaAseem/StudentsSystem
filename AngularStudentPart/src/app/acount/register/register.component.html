@@ -1,0 +1,91 @@
+
+<div class="alert alert-danger col-md-6 " *ngIf="error" style=" border-radius:10px">
+    Register Process Not Completed <div class="bt" (click)="onclose()">X</div>
+</div>
+<form [formGroup]="RegisterForm" (ngSubmit)="onSubmit()">
+    <div class="row justify-content-center ">
+        
+            <div class="m-3 row justify-content-around">
+                
+                <div class="col-md-5 ">
+                    <label for="email" class=" mb-2 ms-2" >Email</label>
+                    <input type="email"  id="email" class="ms-2 form-control" formControlName="email"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('email').invalid&&RegisterForm.get('email').touched&&
+                    RegisterForm.get('email').errors['required']">email is required</span>
+                </div >
+                <div class="col-md-5">
+                    <label for="password" class=" mb-2 ms-2" >Password</label>
+                    <input type="password"  id="password" class="ms-2 form-control" formControlName="password"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('password').invalid&&RegisterForm.get('password').touched&&
+                    RegisterForm.get('password').errors['required']">password is required</span>
+                </div >
+                <div class="col-md-5 ">
+                    <label for="name" class=" mb-2 ms-2" >Name</label>
+                    <input type="text"  id="name" class="ms-2 form-control" formControlName="name"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('name').invalid&&RegisterForm.get('name').touched&&
+                    RegisterForm.get('name').errors['required']">Name is required</span>
+                </div >
+                <div class=" col-md-5">
+                    <label for="city" class=" mb-2 ms-2">City</label>
+                    <input type="text"  id="city" class="ms-2 form-control" formControlName="city"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('city').invalid&&RegisterForm.get('city').touched&&
+                    RegisterForm.get('city').errors['required']">city is required</span>
+                </div >
+                <div class="col-md-5 ">
+                    <label for="streetAdress" class=" mb-2 ms-2" >Address</label>
+                    <input type="text"  id="streetAdress" class="ms-2 form-control" formControlName="streetAdress"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('streetAdress').invalid&&RegisterForm.get('streetAdress').touched&&
+                    RegisterForm.get('streetAdress').errors['required']">address is required</span>
+                </div >
+                <div class="col-md-5 ">
+                    <label for="postalCode" class=" mb-2 ms-2" >Postl Code</label>
+                    <input type="text"  id="postalCode" class="ms-2 form-control" formControlName="postalCode"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('postalCode').invalid&&RegisterForm.get('postalCode').touched&&
+                    RegisterForm.get('postalCode').errors['required']">postal code is required</span>
+                </div >
+                <div class="col-md-5 ">
+                    <label for="phoneNumber" class=" mb-2 ms-2" >Phone</label>
+                    <input type="text"  id="phoneNumber" class="ms-2 form-control" formControlName="phoneNumber"   >
+                    <span class="text-danger" *ngIf="RegisterForm.get('phoneNumber').invalid&&RegisterForm.get('phoneNumber').touched&&
+                    RegisterForm.get('phoneNumber').errors['required']">phone number is required</span>
+                </div >
+                <div class="col-md-5 ">
+                    <label for="state" class=" mb-2 ms-2" >State</label>
+                    <input type="text"  id="state" class="ms-2 form-control" formControlName="state" >
+                    <span class="text-danger" *ngIf="RegisterForm.get('state').invalid&&RegisterForm.get('state').touched&&
+                    RegisterForm.get('state').errors['required']">state is required</span>
+                </div >
+                <div class="col-md-5 " *ngIf="currentUser&&currentUser.role=='Admin'">
+                    <label for="role" class=" mb-2 ms-2" >Role</label>
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example"  formControlName="role">
+                        <option   [value]="'Individual'">Individual</option>
+                        <option   [value]="'Admin'">Admin</option>
+                        <option   [value]="'Employee'">Employee</option>
+
+                      </select>
+                   <!---- <input type="text"  id="role" class="ms-2 form-control" formControlName="role"   >-->
+                </div >
+                <div class="col-md-5 ">
+                    <label for="userName" class=" mb-2 ms-2" >UserName</label>
+                    <input type="text"  id="userName" class="ms-2 form-control" formControlName="userName">
+                    <span class="text-danger" *ngIf="RegisterForm.get('userName').invalid&&RegisterForm.get('userName').touched&&
+                    RegisterForm.get('userName').errors['required']">user name is required</span>
+                </div >
+             <!--- <div class=" text-start mb-3">
+                    <label for="imgurl" class=" mb-2 ms-2">Image</label>
+                    <input type="file"  name="imgUrl" id="imgurl" class=" ms-2 form-control"  formControlName="imgurl" #imag>
+             </div >
+            
+                <div class="  text-center  mb-3">
+                    <img [src]="imag" alt="" width="100%" class="img-responsive" height="200px">
+                </div>-->
+                 
+            </div>
+            </div>
+            <div class=" ms-3">
+                <div class="row mt-3 mb-3 ">
+                    <button class="col-md-3 btn btn-success mt-2 mb-2 me-2" type="submit" [disabled]="!RegisterForm.valid">Save</button>
+                    <button class="col-md-3 btn btn-danger mt-2 mb-2 ms-2" type="button" (click)="onCancel()">Cancel </button>
+                </div>
+     </div>
+        </form>

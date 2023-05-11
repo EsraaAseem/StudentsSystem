@@ -1,0 +1,16 @@
+<div class="form-label-gro">
+    <input
+    [ngClass]="(ControlDir&&ControlDir.control&&!ControlDir.control.valid&&ControlDir.control.touched)
+    ? !ControlDir.control.valid?'is-invalid':'is-valid:':null"
+    [type]="type"
+    (input)="onChange($event)"
+    (blur)="onTouched()"
+    id="{{label}}"
+    >
+    <label for="label">{{label}}</label>
+    <div class="invalid-feedback" *ngIf="(ControlDir&&ControlDir.control&&!ControlDir.control.valid&&ControlDir.control.touched)">
+        <span *ngIf="ControlDir.control.errors?.['required']">{{label}} is required</span>
+        <span *ngIf="ControlDir.control.errors?.['pattern']">required email address</span>
+
+    </div>
+</div>

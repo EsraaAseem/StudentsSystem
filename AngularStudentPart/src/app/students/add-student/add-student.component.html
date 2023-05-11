@@ -1,0 +1,70 @@
+<div class="errorcontent text-center row justify-content-center align-item-center align-content-center" *ngIf=" loginerror&&show">
+  <div class="err">
+    <div class="close" (click)="onClose()" #clo>&#10006;</div>
+    <p>{{loginerror}}</p>
+    <a class=" btn btn-primary"  routerLink="/Student/login" >Login</a>
+  </div>
+</div>
+<form  #inform="ngForm"><!-- (ngSubmit)="onSubmit()"-->
+    <div class="row justify-content-center ">
+        <div class=" ms-3">
+            <div class="row mt-3 mb-3 ">
+                <button class="col-md-3 btn btn-success mt-2 mb-2 me-2" type="submit" [disabled]="!inform.valid ||(currentUser.role=='Individual')" (click)="onSubmit()">Save</button>
+                <button class="col-md-3 btn btn-primary mt-2 mb-2 ms-2" type="button" (click)="onDelete()" [disabled]="!(currentUser.role=='Admin')">Delete </button>
+                <button class="col-md-3 btn btn-danger mt-2 mb-2 ms-2" type="button" (click)="onCancel()">Cancel </button>
+            </div>
+            <div class="alert alert-danger col-md-6 " *ngIf="errorsub" style=" border-radius:10px">
+                there is error <div class="bt" (click)="onclose()">X</div>
+            </div>
+            <div class="m-3 row justify-content-around">
+                <div class="col-md-5 ">
+                    <label for="firstName" class=" mb-2 ms-2" >Name</label>
+                    <input type="text"  id="firstName" class="ms-2 form-control" name="firstName" required  [(ngModel)]="student.firstName" >
+                </div >
+                <div class="col-md-5">
+                    <label for="lastName" class=" mb-2 ms-2" >lName</label>
+                    <input type="text"  id="lastName" class="ms-2 form-control" name="lastName"  [(ngModel)]="student.lastName" >
+                </div >
+                <div class="col-md-5 ">
+                    <label for="phone" class=" mb-2 ms-2" >Phone</label>
+                    <input type="number"  id="phone" class="ms-2 form-control" name="phone" required [(ngModel)]="student.phone"  >
+                </div >
+                <div class=" col-md-5">
+                    <label for="email" class=" mb-2 ms-2" >Email</label>
+                    <input type="email"  id="email" class="ms-2 form-control" name="email" required [(ngModel)]="student.email" >
+                </div >
+                <div class="col-md-5 ">
+                    <label for="address" class=" mb-2 ms-2" >Address</label>
+                    <input type="text"  id="address" class="ms-2 form-control" name="address" required [(ngModel)]="student.address" >
+                </div >
+                <div class="col-md-5 mb-2">
+                    <label for="birthOfData" class=" mb-2 ms-2" >BOD</label>
+                    <input type="date"  id="birthOfData" class="ms-2 form-control" name="birthOfData" [(ngModel)]="student.birthOfData"  >
+                </div >
+                <div class="col-md-5 mt-3">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="genderId"  [(ngModel)]="student.genderId">
+                        <option  *ngFor="let gen of genders" [value]="gen.genderId">{{gen.description}}</option>
+                      </select>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <div class="proimg" >
+                        <img [src]="profileimg" alt="" width="100%" style="height: 200px;">
+                    </div>
+                    <input hidden type="file" (change)="uploadImage($event)"  id="imgFileUrl" class="ms-2 form-control"  #im >
+                    <button class="btn btn-primary mt-4 mb-4" (click)="im.click()">Change img</button>
+                </div >
+                
+
+             <!--- <div class=" text-start mb-3">
+                    <label for="imgurl" class=" mb-2 ms-2">Image</label>
+                    <input type="file"  name="imgUrl" id="imgurl" class=" ms-2 form-control"  formControlName="imgurl" #imag>
+             </div >
+            
+                <div class="  text-center  mb-3">
+                    <img [src]="imag" alt="" width="100%" class="img-responsive" height="200px">
+                </div>-->
+                 
+            </div>
+     </div>
+     </div>
+ </form>

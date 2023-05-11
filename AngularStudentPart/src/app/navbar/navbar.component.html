@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" >
+            <div class="img" style="border-radius: 50%; width: 70px; height: 70px;">
+                <img src="/assets/student-logo.jpg" alt=""   class="img-fluid" width="100%">
+            </div>
+          </a>
+      
+      <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>-->
+      <div class=" navbar" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/Student/login" *ngIf="!currentUser">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/register" *ngIf="currentUser&&currentUser.role=='Admin'">Add User</a>
+        </li>
+          <li class="nav-item">
+            <button aria-current="page" class="btn btn-primary" (click)="onLogout()" *ngIf="currentUser">Logout</button>
+        </li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>

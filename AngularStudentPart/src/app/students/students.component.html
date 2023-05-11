@@ -1,0 +1,32 @@
+
+<div class="  text-center">
+    <div class="header row justify-content-between mb-3 mt-3">
+    <h3 class="text-primary  col-6 col-md-3">Students</h3>
+    <div class=" col-6 col-md-4">
+        <button class="btn btn-primary p-2 col-sm-8 " routerLink="/add-student">Add Student</button>
+    </div>
+    </div>
+    <table class="table table-striped table-hover" text-center *ngIf="students && students.length>0">
+      
+        <tr>
+            <th>name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th></th>
+        </tr>
+        <tbody *ngFor ="let std of students" >
+         <tr>
+           <td>{{std.firstName}}</td>
+           <td>{{std.email}}</td>
+           <td>{{std.phone}}</td>
+           <td>{{std.gender.description}}</td>
+           <td>{{std.address}}</td>
+           <td><a class="btn btn-primary" [routerLink]="std.id" (click)="onEdit(std)" >Edit </a></td>
+         </tr>
+
+        </tbody>
+    </table>
+    <p *ngIf="!students || students.length <=0">there is no Employess</p>
+</div>
